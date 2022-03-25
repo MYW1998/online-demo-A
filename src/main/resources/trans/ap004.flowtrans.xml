@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<flowtran xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ap004" longname="Data transfer demo" kind="query" package="cn.sunline.edsp.busi.trans" xsi:noNamespaceSchemaLocation="ltts-model.xsd">
+    <description><![CDATA[Data transfer demo]]></description>
+    <interface package="cn.sunline.edsp.busi.trans.intf">
+        <input packMode="true"/>
+        <output asParm="true" packMode="true"/>
+        <property packMode="true"/>
+        <printer packMode="true"/>
+    </interface>
+    <flow>
+        <method method="getAndSetTxnRunEnvs" id="getAndSetTxnRunEnvs" longname="Get and set the current transaction public run parameters"/>
+        <method method="testInputOuputPropertySame" longname="Verify that the transaction process method node shares the same object"/>
+    </flow>
+    <outMapping/>
+    <propertyToPrinterMapping/>
+    <outToPrinterMapping/>
+</flowtran>

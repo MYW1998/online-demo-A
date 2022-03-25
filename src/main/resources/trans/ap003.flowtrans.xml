@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<flowtran xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ap003" longname="Transaction level cache and global level cache demo" kind="query" package="cn.sunline.edsp.busi.trans" xsi:noNamespaceSchemaLocation="ltts-model.xsd">
+    <description><![CDATA[Transaction level cache and global level cache demo]]></description>
+    <interface package="cn.sunline.edsp.busi.trans.intf">
+        <input packMode="true">
+            <field id="acctno" type="BasicType.U_ACCTNO" required="false" multi="false" array="false" longname="Account number" ref="AtDict.Acct.acctno"/>
+        </input>
+        <output asParm="true" packMode="true">
+            <field id="teleno" type="BasicType.U_TELENO" required="false" multi="false" array="false" longname="Telephone number" ref="AtDict.Cust.teleno"/>
+            <field id="acctam" type="BasicType.U_ACCTAM" required="false" multi="false" array="false" longname="Account Balance" ref="AtDict.Acct.acctam"/>
+        </output>
+        <property packMode="true">
+            <field id="custno" type="BasicType.U_CUSTNO" required="false" multi="false" array="false" longname="Customer number" ref="AtDict.Cust.custno"/>
+        </property>
+        <printer packMode="true"/>
+    </interface>
+    <flow>
+        <method method="queryAmountByAcctno" id="queryAmountByAcctno" longname="Check account balance based on account number (global cache)"/>
+        <method method="queryTelepByCustno" id="queryTelepByCustno" longname="Query customer phone number based on customer number (transaction level cache)"/>
+    </flow>
+    <outMapping/>
+    <propertyToPrinterMapping/>
+    <outToPrinterMapping/>
+</flowtran>

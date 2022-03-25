@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="AtTable" package="cn.sunline.edsp.busi.tables" longname="Account table structure" classgen="normal" xsi:noNamespaceSchemaLocation="ltts-model.xsd">
+    <table id="kapp_cust" name="kapp_cust" longname="Customer information form" tableType="ORDINARY" virtual="false" abstract="false">
+        <fields>
+            <field id="custno" longname="Customer number" type="BasicType.U_CUSTNO" ref="AtDict.Cust.custno" primarykey="false" final="false" nullable="true" identity="false" allowSubType="true"/>
+            <field id="custna" longname="Customer name" type="BasicType.U_CUSTNA" ref="AtDict.Cust.custna" primarykey="false" final="false" nullable="true" identity="false" allowSubType="true"/>
+            <field id="teleno" longname="Telephone number" type="BasicType.U_TELENO" ref="AtDict.Cust.teleno" primarykey="false" final="false" nullable="true" identity="false" allowSubType="true"/>
+        </fields>
+        <ddls/>
+        <odbindexes>
+            <index id="odb1" type="unique" fields="custno" operate="selectOne deleteOne updateOne selectOneWithLock"/>
+            <index id="odb2" type="index" fields="custna" operate="selectFirst selectAll selectPage update delete selectCursor selectPageWithCount"/>
+        </odbindexes>
+        <indexes>
+            <index id="kapp_acct_db1" type="primarykey" fields="custno">
+                <ddls/>
+            </index>
+            <index id="kapp_acct_db2" type="index" fields="custna">
+                <ddls/>
+            </index>
+        </indexes>
+    </table>
+    <table id="kapp_acct" name="kapp_acct" longname="Account information form" tableType="ORDINARY" virtual="false" abstract="false">
+        <fields>
+            <field id="acctno" longname="Account number" type="BasicType.U_ACCTNO" ref="AtDict.Acct.acctno" primarykey="false" final="false" nullable="true" identity="false" allowSubType="true"/>
+            <field id="cardno" longname="Card number" type="BasicType.U_CARDNO" ref="AtDict.Acct.cardno" primarykey="false" final="false" nullable="true" identity="false" allowSubType="true"/>
+            <field id="acctam" longname="Account Balance" type="BasicType.U_ACCTAM" ref="AtDict.Acct.acctam" primarykey="false" final="false" nullable="true" identity="false" allowSubType="true"/>
+            <field id="acctst" longname="Account Status" type="BasicEnumType.E_ACCTST" ref="AtDict.Acct.acctst" primarykey="false" final="false" nullable="true" identity="false" allowSubType="true"/>
+            <field id="custno" longname="Customer number" type="BasicType.U_CUSTNO" ref="AtDict.Cust.custno" primarykey="false" final="false" nullable="true" identity="false" allowSubType="true"/>
+        </fields>
+        <ddls/>
+        <odbindexes>
+            <index id="odb2" type="unique" fields="acctno" operate="selectOne deleteOne updateOne selectOneWithLock"/>
+        </odbindexes>
+        <indexes>
+            <index id="acctno_index" type="primarykey" fields="acctno">
+                <ddls/>
+            </index>
+        </indexes>
+    </table>
+</schema>

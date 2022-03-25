@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<flowtran xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="getUserInfo" longname="测试" kind="query" package="cn.sunline.edsp.busi.trans" xsi:noNamespaceSchemaLocation="ltts-model.xsd">
+    <interface package="cn.sunline.edsp.busi.online.demo.trans.intf">
+        <input packMode="true">
+            <field id="name" type="string" required="false" multi="false" array="false" longname="哈哈哈" ref="Test.test.name"/>
+        </input>
+        <output asParm="true" packMode="true">
+            <field id="name" type="string" required="false" multi="false" array="false" longname="哈哈哈" ref="Test.test.name"/>
+            <field id="portone" type="string" required="false" multi="false" array="false" longname="哈哈" ref="Test.test.portone"/>
+            <field id="porttwo" type="string" required="false" multi="false" array="false" longname="哈" ref="Test.test.porttwo"/>
+        </output>
+        <property packMode="true"/>
+        <printer packMode="true"/>
+    </interface>
+    <flow>
+        <service serviceName="hello.getUserInfo" id="getUserInfo" longname="获取用户信息">
+            <in_mappings by_interface="true">
+                <mapping src="name" dest="name" by_interface="true" on_top="true"/>
+            </in_mappings>
+            <out_mappings by_interface="true">
+                <mapping src="name" dest="name" by_interface="true" on_top="true"/>
+                <mapping src="portone" dest="portone" by_interface="true" on_top="true"/>
+                <mapping src="porttwo" dest="porttwo" by_interface="true" on_top="true"/>
+            </out_mappings>
+        </service>
+        <method method="getMyselfPort" id="getMyselfPort" longname="拿服务端口号"/>
+    </flow>
+    <outMapping>
+        <mapping src="name" dest="name" by_interface="true" on_top="true"/>
+    </outMapping>
+    <propertyToPrinterMapping/>
+    <outToPrinterMapping/>
+</flowtran>

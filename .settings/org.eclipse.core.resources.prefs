@@ -1,0 +1,11 @@
+eclipse.preferences.version=1
+encoding//src/main/java=UTF-8
+encoding//src/main/resources=UTF-8
+encoding//src/main/resources/application-obase.properties=UTF-8
+encoding//src/main/resources/dict/Test.d_schema.xml=UTF-8
+encoding//src/main/resources/dict/userInfoDict.d_schema.xml=UTF-8
+encoding//src/main/resources/serviceimpl/helloImpl.serviceImpl.xml=UTF-8
+encoding//src/main/resources/servicetype/hello.serviceType.xml=UTF-8
+encoding//src/main/resources/trans/getMessageByName.flowtrans.xml=UTF-8
+encoding//src/main/resources/trans/getUserInfo.flowtrans.xml=UTF-8
+encoding/<project>=UTF-8

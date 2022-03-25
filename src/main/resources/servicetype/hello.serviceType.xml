@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<serviceType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="hello" kind="interface" longname="快速入门" package="cn.sunline.edsp.busi.servicetype" xsi:noNamespaceSchemaLocation="ltts-model.xsd">
+    <service id="getUserInfo" name="getUserInfo" longname="获取用户信息">
+        <interface>
+            <input packMode="true">
+                <field id="name" type="string" required="false" multi="false" array="false" longname="哈哈哈" ref="Test.test.name"/>
+            </input>
+            <output asParm="false" packMode="true">
+                <field id="name" type="string" required="false" multi="false" array="false" longname="哈哈哈" ref="Test.test.name"/>
+                <field id="portone" type="string" required="false" multi="false" array="false" longname="哈哈" ref="Test.test.portone"/>
+                <field id="porttwo" type="string" required="false" multi="false" array="false" longname="哈" ref="Test.test.porttwo"/>
+            </output>
+            <property packMode="false"/>
+            <printer packMode="true"/>
+        </interface>
+    </service>
+    <service id="getMeassageByName" name="getMeassageByName" longname="根据Name获取用户信息">
+        <interface>
+            <input packMode="true">
+                <field id="name" type="string" required="true" multi="false" array="false" longname="用户姓名" ref="userInfoDict.userInfoInput.name"/>
+                <field id="unitId" type="string" required="false" multi="false" array="false" longname="单元id" ref="userInfoDict.userInfoInput.unitId"/>
+            </input>
+            <output asParm="false" packMode="true">
+                <field id="name" type="string" required="false" multi="false" array="false" longname="用户姓名" ref="userInfoDict.userInfoOutput.name"/>
+                <field id="routeProcess" type="object" required="false" multi="false" array="false" longname="路由跟踪" desc="数据路由的过程" ref="userInfoDict.userInfoOutput.routeProcess"/>
+            </output>
+            <property packMode="false"/>
+            <printer packMode="true"/>
+        </interface>
+    </service>
+</serviceType>

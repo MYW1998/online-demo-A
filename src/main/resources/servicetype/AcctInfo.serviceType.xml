@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<serviceType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="AcctInfo" kind="business" longname="Account service" package="cn.sunline.edsp.busi.servicetype" xsi:noNamespaceSchemaLocation="ltts-model.xsd">
+    <service id="createAcct" name="createAcct" longname="Create account information">
+        <interface>
+            <input packMode="true">
+                <field id="custno" type="BasicType.U_CUSTNO" required="false" multi="false" array="false" longname="Customer number" ref="AtDict.Cust.custno"/>
+                <field id="tranam" type="BasicType.U_TRANNAM" required="false" multi="false" array="false" longname="transaction amount" ref="AtDict.Tran.tranam"/>
+            </input>
+            <output asParm="true" packMode="true">
+                <field id="acctno" type="BasicType.U_ACCTNO" required="false" multi="false" array="false" longname="Account number" ref="AtDict.Acct.acctno"/>
+                <field id="cardno" type="BasicType.U_CARDNO" required="false" multi="false" array="false" longname="Card number" ref="AtDict.Acct.cardno"/>
+                <field id="acctam" type="BasicType.U_ACCTAM" required="false" multi="false" array="false" longname="Account Balance" ref="AtDict.Acct.acctam"/>
+                <field id="acctst" type="BasicEnumType.E_ACCTST" required="false" multi="false" array="false" longname="Account Status" ref="AtDict.Acct.acctst"/>
+            </output>
+            <property packMode="false"/>
+            <printer packMode="true"/>
+        </interface>
+    </service>
+</serviceType>

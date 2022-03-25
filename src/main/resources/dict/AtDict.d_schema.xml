@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="AtDict" package="cn.sunline.edsp.busi.dict" longname="Account module data dictionary" classgen="normal" xsi:noNamespaceSchemaLocation="ltts-model.xsd">
+    <complexType id="Cust" longname="Customer dictionary" dict="true" abstract="false" introduct="false">
+        <element id="custno" longname="Customer number" type="BasicType.U_CUSTNO" required="false" multi="false" range="false" array="false" final="false" override="false" allowSubType="true"/>
+        <element id="custna" longname="Customer name" type="BasicType.U_CUSTNA" required="false" multi="false" range="false" array="false" final="false" override="false" allowSubType="true"/>
+        <element id="teleno" longname="Telephone number" type="BasicType.U_TELENO" required="false" multi="false" range="false" array="false" final="false" override="false" allowSubType="true"/>
+    </complexType>
+    <complexType id="Acct" longname="Account dictionary" dict="true" abstract="false" introduct="false">
+        <element id="acctno" longname="Account number" type="BasicType.U_ACCTNO" required="false" multi="false" range="false" array="false" final="false" override="false" allowSubType="true"/>
+        <element id="cardno" longname="Card number" type="BasicType.U_CARDNO" required="false" multi="false" range="false" array="false" final="false" override="false" allowSubType="true"/>
+        <element id="acctst" longname="Account Status" type="BasicEnumType.E_ACCTST" required="false" multi="false" range="false" array="false" final="false" override="false" allowSubType="true"/>
+        <element id="acctam" longname="Account Balance" type="BasicType.U_ACCTAM" required="false" multi="false" range="false" array="false" final="false" override="false" allowSubType="true"/>
+    </complexType>
+    <complexType id="Tran" longname="Trading dictionary" dict="true" abstract="false" introduct="false">
+        <element id="tranam" longname="transaction amount" type="BasicType.U_TRANNAM" required="false" multi="false" range="false" array="false" final="false" override="false" allowSubType="true"/>
+    </complexType>
+    <complexType id="Comm" longname="Common module" dict="true" abstract="false" introduct="false">
+        <element id="bossno" longname="corporate code" type="BasicType.U_BOSSNO" required="false" multi="false" range="false" array="false" final="false" override="false" allowSubType="true"/>
+        <element id="tranno" longname="Trading serial number" type="BasicType.U_TRANNO" required="false" multi="false" range="false" array="false" final="false" override="false" allowSubType="true"/>
+    </complexType>
+</schema>

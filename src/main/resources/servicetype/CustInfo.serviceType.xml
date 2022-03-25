@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<serviceType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="CustInfo" kind="business" longname="Customer Information" package="cn.sunline.edsp.busi.servicetype" xsi:noNamespaceSchemaLocation="ltts-model.xsd">
+    <service id="createCust" name="createCust" longname="Create customer information">
+        <interface>
+            <input packMode="true">
+                <field id="custna" type="BasicType.U_CUSTNA" required="false" multi="false" array="false" longname="Customer name" ref="AtDict.Cust.custna"/>
+                <field id="teleno" type="BasicType.U_TELENO" required="false" multi="false" array="false" longname="Telephone number" ref="AtDict.Cust.teleno"/>
+            </input>
+            <output asParm="true" packMode="true">
+                <field id="custno" type="BasicType.U_CUSTNO" required="false" multi="false" array="false" longname="Customer number" ref="AtDict.Cust.custno"/>
+            </output>
+            <property packMode="false"/>
+            <printer packMode="true"/>
+        </interface>
+    </service>
+</serviceType>

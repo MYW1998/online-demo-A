@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="userInfoDict" package="cn.sunline.edsp.busi.online.demo.dict" longname="获取用户信息报文实体" classgen="normal" xsi:noNamespaceSchemaLocation="ltts-model.xsd">
+    <complexType id="userInfoInput" longname="用户信息输入报文" dict="true" abstract="false" introduct="false">
+        <element id="name" longname="用户姓名" type="string" required="false" multi="false" range="false" array="false" final="false" override="false" allowSubType="true"/>
+        <element id="unitId" longname="单元id" type="string" required="false" multi="false" range="false" array="false" final="false" override="false" allowSubType="true"/>
+    </complexType>
+    <complexType id="userInfoOutput" longname="用户信息-输出报文" dict="true" abstract="false" introduct="false">
+        <element id="name" longname="用户姓名" type="string" required="false" multi="false" range="false" array="false" final="false" override="false" allowSubType="true"/>
+        <element id="routeProcess" longname="路由跟踪" type="object" required="false" desc="数据路由的过程" multi="false" range="false" array="false" final="false" override="false" allowSubType="true"/>
+    </complexType>
+</schema>

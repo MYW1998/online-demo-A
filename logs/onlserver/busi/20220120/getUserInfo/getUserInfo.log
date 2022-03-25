@@ -1,0 +1,162 @@
+[WARN ][13:20:24,485][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][cn.sunline.adp.dao.datasource.conn.DefaultDBConnectionManager:415][The current connection has been executed beginTransaction, no need to repeat!]
+[INFO ][13:20:24,485][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][cn.sunline.adp.core.reloader.ConfigReloaderFactory:133][The current thread starts to bind configuration parameters]
+[INFO ][13:20:24,487][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][cn.sunline.adp.cedar.engine.online.handler.before.OETLogBeforeProcessHandler:44][
+-------------------------transaction service[getUserInfo][null][1642656024][1642656024][] Start-------------------------]
+[INFO ][13:20:24,487][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][cn.sunline.adp.cedar.engine.online.handler.before.OETLogBeforeProcessHandler:46][REQ[{output={}, input={name=hanxin2, age=23, teleno=17867345555, certtype=P, certno=467192346449999, tranam=60000}, printer={}, comm_res={}, property={}, link_res={}, header={}, link_req={}, sys={servicecode=/getUserInfo, busiseqno=1642656024, callseqno=1642656024, profile={}}, comm_req={busi_seq=1642656024, call_seq=1642656024}}]]
+[INFO ][13:20:24,529][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][cn.sunline.adp.cedar.flowtran.utils.FlowTranUtils$1:95][SERVICE[Begine][getUserInfo]]
+[DAREA][13:20:24,531][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][cn.sunline.adp.cedar.flowtran.runtime.executor.FlowServiceNodeExecutor:73][[DA][FLOW][Input][Input{name=hanxin2, prcsna=测试}]]
+[DAREA][13:20:24,532][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][cn.sunline.adp.cedar.flowtran.runtime.executor.FlowServiceNodeExecutor:76][[DA][FLOW][Property][Property{name=hanxin2, prcsna=测试}]]
+[INFO ][13:20:24,582][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][cn.sunline.adp.cedar.base.logging.TraceLogUtil:74][]
+[INFO ][13:20:24,773][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][com.netflix.config.ChainedDynamicProperty$ChainLink:115][Flipping property: edsp-gls-read-server.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647]
+[INFO ][13:20:24,804][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][com.netflix.loadbalancer.BaseLoadBalancer:197][Client: edsp-gls-read-server instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=edsp-gls-read-server,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null]
+[INFO ][13:20:24,812][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][com.netflix.loadbalancer.DynamicServerListLoadBalancer:222][Using serverListUpdater PollingServerListUpdater]
+[INFO ][13:20:24,835][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][com.netflix.config.ChainedDynamicProperty$ChainLink:115][Flipping property: edsp-gls-read-server.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647]
+[INFO ][13:20:24,837][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][com.netflix.loadbalancer.DynamicServerListLoadBalancer:150][DynamicServerListLoadBalancer for client edsp-gls-read-server initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=edsp-gls-read-server,current list of Servers=[10.22.4.69:10020],Load balancer stats=Zone stats: {unknown=[Zone:unknown;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:10.22.4.69:10020;	Zone:UNKNOWN;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:com.alibaba.cloud.nacos.ribbon.NacosServerList@59a8a669]
+[INFO ][13:20:24,911][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][com.netflix.http4.ConnectionPoolCleaner:112][Initializing ConnectionPoolCleaner for NFHttpClient:edsp-gls-read-server]
+[INFO ][13:20:25,178][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][com.netflix.config.ChainedDynamicProperty$ChainLink:115][Flipping property: 10.22.4.69:10020.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647]
+[INFO ][13:20:25,180][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][com.netflix.loadbalancer.BaseLoadBalancer:197][Client: 10.22.4.69:10020 instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=10.22.4.69:10020,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null]
+[INFO ][13:20:25,181][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][com.netflix.loadbalancer.DynamicServerListLoadBalancer:222][Using serverListUpdater PollingServerListUpdater]
+[INFO ][13:20:25,188][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][com.netflix.loadbalancer.DynamicServerListLoadBalancer:150][DynamicServerListLoadBalancer for client 10.22.4.69:10020 initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=10.22.4.69:10020,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:com.alibaba.cloud.nacos.ribbon.NacosServerList@3d6052ae]
+[INFO ][13:20:25,200][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][com.netflix.http4.ConnectionPoolCleaner:112][Initializing ConnectionPoolCleaner for NFHttpClient:10.22.4.69:10020]
+[INFO ][13:20:25,280][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][cn.sunline.edsp.traffic.ribbon.loadbalancer.helper.TrafficServerUnitHelper:38][servers.size:1]
+[INFO ][13:20:25,282][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][cn.sunline.edsp.traffic.ribbon.loadbalancer.helper.TrafficServerPriorityHelper:51][servers.size:1]
+[INFO ][13:20:25,283][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][cn.sunline.edsp.traffic.ribbon.loadbalancer.helper.TrafficServerPriorityHelper:69][priorityMode: local]
+[INFO ][13:20:25,283][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][cn.sunline.edsp.traffic.ribbon.loadbalancer.helper.TrafficServerPriorityHelper:73][masterServerIdc: null]
+[INFO ][13:20:25,283][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][cn.sunline.edsp.traffic.ribbon.loadbalancer.helper.TrafficServerPriorityHelper:163][hostPort-10.22.4.69:10020|serverId-10.22.4.69:10020 : The data-center is not configured]
+[INFO ][13:20:25,283][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][cn.sunline.edsp.traffic.ribbon.loadbalancer.helper.TrafficServerPriorityHelper:84][class cn.sunline.edsp.traffic.ribbon.loadbalancer.helper.TrafficServerPriorityHelper filter is over,servers.size: 1]
+[DAREA][13:20:25,371][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][cn.sunline.adp.cedar.service.engine.handler.ServiceEngineHandlerProxy:53][[R]DA[SERVICE]-[hello.getUserInfo]-[Before]{input={name=hanxin2}, comm_req={}, sys={}}]
+[INFO ][13:20:25,382][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][cn.sunline.adp.cedar.protocol.rest.out.handler.RestTemplateRemoteInvokeHandler:83][Request path:http://service-adp2/hello/getUserInfo]
+[INFO ][13:20:25,382][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][cn.sunline.adp.cedar.protocol.rest.out.handler.RestTemplateRemoteInvokeHandler:84][Request type[POST], dcnNo[dcn2].]
+[INFO ][13:20:25,448][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][com.netflix.config.ChainedDynamicProperty$ChainLink:115][Flipping property: service-adp2.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647]
+[INFO ][13:20:25,449][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][com.netflix.loadbalancer.BaseLoadBalancer:197][Client: service-adp2 instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=service-adp2,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null]
+[INFO ][13:20:25,450][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][com.netflix.loadbalancer.DynamicServerListLoadBalancer:222][Using serverListUpdater PollingServerListUpdater]
+[INFO ][13:20:25,461][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][com.netflix.config.ChainedDynamicProperty$ChainLink:115][Flipping property: service-adp2.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647]
+[INFO ][13:20:25,461][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][com.netflix.loadbalancer.DynamicServerListLoadBalancer:150][DynamicServerListLoadBalancer for client service-adp2 initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=service-adp2,current list of Servers=[10.18.89.208:8888],Load balancer stats=Zone stats: {unknown=[Zone:unknown;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:10.18.89.208:8888;	Zone:UNKNOWN;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 CST 1970;	First connection made: Thu Jan 01 08:00:00 CST 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:com.alibaba.cloud.nacos.ribbon.NacosServerList@6ba3d247]
+[INFO ][13:20:25,471][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][com.netflix.http4.ConnectionPoolCleaner:112][Initializing ConnectionPoolCleaner for NFHttpClient:service-adp2]
+[INFO ][13:20:25,564][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][com.netflix.config.ChainedDynamicProperty$ChainLink:115][Flipping property: 10.18.89.208:8888.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647]
+[INFO ][13:20:25,566][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][com.netflix.loadbalancer.BaseLoadBalancer:197][Client: 10.18.89.208:8888 instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=10.18.89.208:8888,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null]
+[INFO ][13:20:25,566][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][com.netflix.loadbalancer.DynamicServerListLoadBalancer:222][Using serverListUpdater PollingServerListUpdater]
+[INFO ][13:20:25,572][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][com.netflix.loadbalancer.DynamicServerListLoadBalancer:150][DynamicServerListLoadBalancer for client 10.18.89.208:8888 initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=10.18.89.208:8888,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:com.alibaba.cloud.nacos.ribbon.NacosServerList@4ca7b5e3]
+[INFO ][13:20:25,584][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][com.netflix.http4.ConnectionPoolCleaner:112][Initializing ConnectionPoolCleaner for NFHttpClient:10.18.89.208:8888]
+[INFO ][13:20:25,659][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][cn.sunline.edsp.traffic.ribbon.loadbalancer.helper.TrafficServerUnitHelper:38][servers.size:1]
+[INFO ][13:20:25,664][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][cn.sunline.edsp.traffic.ribbon.loadbalancer.helper.TrafficServerUnitHelper:53][unit information is UnitInfo{unitId='dcn2', status=0, type='R', shardIds='s$->{11..20}', shardSumNum=0, shardIdList=[s11, s12, s13, s14, s15, s16, s17, s18, s19, s20], metadata={BACK_IDC_NODES=[{"idcId":"idc22"},{"idcId":"idc23"}], IDC_NODE={"idcId":"idc1"}, PRIORITY_MODE=master, REGION=SZ}, idcNode=IDCNode{idcId='idc1', proxyAddr='null', status='null'}, backUpIdcNodeList=[IDCNode{idcId='idc22', proxyAddr='null', status='null'}, IDCNode{idcId='idc23', proxyAddr='null', status='null'}]}]
+[INFO ][13:20:25,665][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][cn.sunline.edsp.traffic.ribbon.loadbalancer.helper.TrafficServerPriorityHelper:51][servers.size:1]
+[INFO ][13:20:25,666][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][cn.sunline.edsp.traffic.ribbon.loadbalancer.helper.TrafficServerPriorityHelper:69][priorityMode: master]
+[INFO ][13:20:25,666][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][cn.sunline.edsp.traffic.ribbon.loadbalancer.helper.TrafficServerPriorityHelper:73][masterServerIdc: idc1]
+[INFO ][13:20:25,667][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][cn.sunline.edsp.traffic.ribbon.loadbalancer.helper.TrafficServerPriorityHelper:84][class cn.sunline.edsp.traffic.ribbon.loadbalancer.helper.TrafficServerPriorityHelper filter is over,servers.size: 1]
+[INFO ][13:20:26,226][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][cn.sunline.adp.cedar.protocol.rest.out.handler.RestRemoteServiceExecuteProtocolHandler:55][response info: ["{\"comm_res\":{},\"output\":{\"portone\":null,\"name\":\"hanxin2\",\"porttwo\":\"8888\"},\"printer\":null,\"sys\":{\"erortx\":\"\\\\u4EA4\\\\u6613\\\\u6210\\\\u529F\",\"erorcd\":\"AAAAAAAAAA\",\"maxsubtransno\":\"\",\"profile\":{},\"pckgsq\":\"00000000\",\"status\":\"S\"}}"]]
+[INFO ][13:20:26,232][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][cn.sunline.adp.cedar.base.logging.TraceLogUtil:74][]
+[DAREA][13:20:26,232][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][cn.sunline.adp.cedar.service.engine.handler.ServiceEngineHandlerProxy:64][[R]DA[SERVICE]-[hello.getUserInfo]-[After]{"output":{"name":"hanxin2","porttwo":"8888"},"comm_res":{},"header":{},"sys":{"erortx":"\\u4EA4\\u6613\\u6210\\u529F","erorcd":"AAAAAAAAAA","maxsubtransno":"","profile":{},"pckgsq":"00000000","status":"S"}}]
+[INFO ][13:20:26,234][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][cn.sunline.adp.cedar.flowtran.utils.FlowTranUtils$1:110][SERVICE[End][getUserInfo]]
+[INFO ][13:20:26,234][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][cn.sunline.adp.cedar.flowtran.utils.FlowTranUtils$1:117][MethodNode[Begine][getMyselfPort]]
+[INFO ][13:20:26,238][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][cn.sunline.adp.cedar.flowtran.utils.FlowTranUtils$1:131][MethodNode[End][getMyselfPort]]
+[INFO ][13:20:26,241][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][cn.sunline.adp.cedar.engine.online.handler.after.OETSetResponseHeadHandler:37][getTxnTempObjMap:{}]
+[INFO ][13:20:26,244][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][cn.sunline.adp.dao.datasource.transaction.impl.DefaultTransactionManager$1:93][DB-1[Commit][FRWDB], DB cumulative time [0]]
+[INFO ][13:20:26,245][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][cn.sunline.adp.cedar.base.logging.TraceLogUtil:74][]
+[INFO ][13:20:26,245][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][cn.sunline.adp.cedar.engine.online.handler.last.OETDumpDebugInfoHandler:37][
+Public run variable assignment
+	Field mapping
+<transaction start>
+<transaction input interface data mapping>
+	Field mapping
+		name->name=hanxin2
+<transaction attribute interface data mapping>
+	Field mapping
+<transaction output interface data mapping>
+	Field mapping
+		name->name=null
+		portone->portone=null
+		porttwo->porttwo=null
+Execution service id[getUserInfo] name[hello.getUserInfo]
+	Field mapping
+		name->name=hanxin2
+	[R] execution service: name[hello.getUserInfo]
+	Field mapping
+		name->name=hanxin2
+		porttwo->porttwo=8888
+Execution method node id[getMyselfPort] method[getMyselfPort]
+	Execute method node [getUserInfo] in transaction [getMyselfPort]
+<transaction output variable mapping>
+	Field mapping
+		name->name=hanxin2
+		portone->portone=8887
+		porttwo->porttwo=8888
+<End of transaction>
+<Common response variable output to data area>
+	Field mapping
+]
+[INFO ][13:20:26,245][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][cn.sunline.adp.cedar.engine.online.handler.last.OETLogResponseHandler:31][RES[{sys={erortx=\u4EA4\u6613\u6210\u529F, pckgsq=00000000, erorcd=AAAAAAAAAA, status=S, maxsubtransno=}, comm_res={}, output={name=hanxin2, portone=8887, porttwo=8888}, printer={}}]]
+[INFO ][13:20:26,245][http-nio-8887-exec-1][ ][ ][ ][/getUserInfo][cn.sunline.adp.cedar.engine.online.handler.last.OETLogResponseHandler:45][
+-------------------------transaction service[getUserInfo][null][1642656024][1642656024][] End-------------------------]
+[WARN ][13:20:39,978][http-nio-8887-exec-2][ ][ ][ ][/getUserInfo][cn.sunline.adp.dao.datasource.conn.DefaultDBConnectionManager:415][The current connection has been executed beginTransaction, no need to repeat!]
+[INFO ][13:20:39,978][http-nio-8887-exec-2][ ][ ][ ][/getUserInfo][cn.sunline.adp.core.reloader.ConfigReloaderFactory:133][The current thread starts to bind configuration parameters]
+[INFO ][13:20:39,978][http-nio-8887-exec-2][ ][ ][ ][/getUserInfo][cn.sunline.adp.cedar.engine.online.handler.before.OETLogBeforeProcessHandler:44][
+-------------------------transaction service[getUserInfo][null][1642656040][1642656040][] Start-------------------------]
+[INFO ][13:20:39,978][http-nio-8887-exec-2][ ][ ][ ][/getUserInfo][cn.sunline.adp.cedar.engine.online.handler.before.OETLogBeforeProcessHandler:46][REQ[{output={}, input={name=hanxin2, age=23, teleno=17867345555, certtype=P, certno=467192346449999, tranam=60000}, printer={}, comm_res={}, property={}, link_res={}, header={}, link_req={}, sys={servicecode=/getUserInfo, busiseqno=1642656040, callseqno=1642656040, profile={}}, comm_req={busi_seq=1642656040, call_seq=1642656040}}]]
+[INFO ][13:20:39,979][http-nio-8887-exec-2][ ][ ][ ][/getUserInfo][cn.sunline.adp.cedar.flowtran.utils.FlowTranUtils$1:95][SERVICE[Begine][getUserInfo]]
+[DAREA][13:20:39,979][http-nio-8887-exec-2][ ][ ][ ][/getUserInfo][cn.sunline.adp.cedar.flowtran.runtime.executor.FlowServiceNodeExecutor:73][[DA][FLOW][Input][Input{name=hanxin2, prcsna=测试}]]
+[DAREA][13:20:39,979][http-nio-8887-exec-2][ ][ ][ ][/getUserInfo][cn.sunline.adp.cedar.flowtran.runtime.executor.FlowServiceNodeExecutor:76][[DA][FLOW][Property][Property{name=hanxin2, prcsna=测试}]]
+[INFO ][13:20:39,986][http-nio-8887-exec-2][ ][ ][ ][/getUserInfo][cn.sunline.adp.cedar.base.logging.TraceLogUtil:74][]
+[INFO ][13:20:39,987][http-nio-8887-exec-2][ ][ ][ ][/getUserInfo][cn.sunline.edsp.traffic.ribbon.loadbalancer.helper.TrafficServerUnitHelper:38][servers.size:1]
+[INFO ][13:20:39,987][http-nio-8887-exec-2][ ][ ][ ][/getUserInfo][cn.sunline.edsp.traffic.ribbon.loadbalancer.helper.TrafficServerPriorityHelper:51][servers.size:1]
+[INFO ][13:20:39,987][http-nio-8887-exec-2][ ][ ][ ][/getUserInfo][cn.sunline.edsp.traffic.ribbon.loadbalancer.helper.TrafficServerPriorityHelper:69][priorityMode: local]
+[INFO ][13:20:39,987][http-nio-8887-exec-2][ ][ ][ ][/getUserInfo][cn.sunline.edsp.traffic.ribbon.loadbalancer.helper.TrafficServerPriorityHelper:73][masterServerIdc: null]
+[INFO ][13:20:39,988][http-nio-8887-exec-2][ ][ ][ ][/getUserInfo][cn.sunline.edsp.traffic.ribbon.loadbalancer.helper.TrafficServerPriorityHelper:163][hostPort-10.22.4.69:10020|serverId-10.22.4.69:10020 : The data-center is not configured]
+[INFO ][13:20:39,988][http-nio-8887-exec-2][ ][ ][ ][/getUserInfo][cn.sunline.edsp.traffic.ribbon.loadbalancer.helper.TrafficServerPriorityHelper:84][class cn.sunline.edsp.traffic.ribbon.loadbalancer.helper.TrafficServerPriorityHelper filter is over,servers.size: 1]
+[DAREA][13:20:40,036][http-nio-8887-exec-2][ ][ ][ ][/getUserInfo][cn.sunline.adp.cedar.service.engine.handler.ServiceEngineHandlerProxy:53][[R]DA[SERVICE]-[hello.getUserInfo]-[Before]{input={name=hanxin2}, comm_req={}, sys={}}]
+[INFO ][13:20:40,037][http-nio-8887-exec-2][ ][ ][ ][/getUserInfo][cn.sunline.adp.cedar.protocol.rest.out.handler.RestTemplateRemoteInvokeHandler:83][Request path:http://service-adp2/hello/getUserInfo]
+[INFO ][13:20:40,037][http-nio-8887-exec-2][ ][ ][ ][/getUserInfo][cn.sunline.adp.cedar.protocol.rest.out.handler.RestTemplateRemoteInvokeHandler:84][Request type[POST], dcnNo[dcn2].]
+[INFO ][13:20:40,038][http-nio-8887-exec-2][ ][ ][ ][/getUserInfo][cn.sunline.edsp.traffic.ribbon.loadbalancer.helper.TrafficServerUnitHelper:38][servers.size:1]
+[INFO ][13:20:40,038][http-nio-8887-exec-2][ ][ ][ ][/getUserInfo][cn.sunline.edsp.traffic.ribbon.loadbalancer.helper.TrafficServerUnitHelper:53][unit information is UnitInfo{unitId='dcn2', status=0, type='R', shardIds='s$->{11..20}', shardSumNum=0, shardIdList=[s11, s12, s13, s14, s15, s16, s17, s18, s19, s20], metadata={BACK_IDC_NODES=[{"idcId":"idc22"},{"idcId":"idc23"}], IDC_NODE={"idcId":"idc1"}, PRIORITY_MODE=master, REGION=SZ}, idcNode=IDCNode{idcId='idc1', proxyAddr='null', status='null'}, backUpIdcNodeList=[IDCNode{idcId='idc22', proxyAddr='null', status='null'}, IDCNode{idcId='idc23', proxyAddr='null', status='null'}]}]
+[INFO ][13:20:40,038][http-nio-8887-exec-2][ ][ ][ ][/getUserInfo][cn.sunline.edsp.traffic.ribbon.loadbalancer.helper.TrafficServerPriorityHelper:51][servers.size:1]
+[INFO ][13:20:40,039][http-nio-8887-exec-2][ ][ ][ ][/getUserInfo][cn.sunline.edsp.traffic.ribbon.loadbalancer.helper.TrafficServerPriorityHelper:69][priorityMode: master]
+[INFO ][13:20:40,039][http-nio-8887-exec-2][ ][ ][ ][/getUserInfo][cn.sunline.edsp.traffic.ribbon.loadbalancer.helper.TrafficServerPriorityHelper:73][masterServerIdc: idc1]
+[INFO ][13:20:40,039][http-nio-8887-exec-2][ ][ ][ ][/getUserInfo][cn.sunline.edsp.traffic.ribbon.loadbalancer.helper.TrafficServerPriorityHelper:84][class cn.sunline.edsp.traffic.ribbon.loadbalancer.helper.TrafficServerPriorityHelper filter is over,servers.size: 1]
+[INFO ][13:20:40,074][http-nio-8887-exec-2][ ][ ][ ][/getUserInfo][cn.sunline.adp.cedar.protocol.rest.out.handler.RestRemoteServiceExecuteProtocolHandler:55][response info: ["{\"comm_res\":{},\"output\":{\"portone\":null,\"name\":\"hanxin2\",\"porttwo\":\"8888\"},\"printer\":null,\"sys\":{\"erortx\":\"\\\\u4EA4\\\\u6613\\\\u6210\\\\u529F\",\"erorcd\":\"AAAAAAAAAA\",\"maxsubtransno\":\"\",\"profile\":{},\"pckgsq\":\"00000000\",\"status\":\"S\"}}"]]
+[INFO ][13:20:40,074][http-nio-8887-exec-2][ ][ ][ ][/getUserInfo][cn.sunline.adp.cedar.base.logging.TraceLogUtil:74][]
+[DAREA][13:20:40,075][http-nio-8887-exec-2][ ][ ][ ][/getUserInfo][cn.sunline.adp.cedar.service.engine.handler.ServiceEngineHandlerProxy:64][[R]DA[SERVICE]-[hello.getUserInfo]-[After]{"output":{"name":"hanxin2","porttwo":"8888"},"comm_res":{},"header":{},"sys":{"erortx":"\\u4EA4\\u6613\\u6210\\u529F","erorcd":"AAAAAAAAAA","maxsubtransno":"","profile":{},"pckgsq":"00000000","status":"S"}}]
+[INFO ][13:20:40,075][http-nio-8887-exec-2][ ][ ][ ][/getUserInfo][cn.sunline.adp.cedar.flowtran.utils.FlowTranUtils$1:110][SERVICE[End][getUserInfo]]
+[INFO ][13:20:40,075][http-nio-8887-exec-2][ ][ ][ ][/getUserInfo][cn.sunline.adp.cedar.flowtran.utils.FlowTranUtils$1:117][MethodNode[Begine][getMyselfPort]]
+[INFO ][13:20:40,076][http-nio-8887-exec-2][ ][ ][ ][/getUserInfo][cn.sunline.adp.cedar.flowtran.utils.FlowTranUtils$1:131][MethodNode[End][getMyselfPort]]
+[INFO ][13:20:40,076][http-nio-8887-exec-2][ ][ ][ ][/getUserInfo][cn.sunline.adp.cedar.engine.online.handler.after.OETSetResponseHeadHandler:37][getTxnTempObjMap:{}]
+[INFO ][13:20:40,079][http-nio-8887-exec-2][ ][ ][ ][/getUserInfo][cn.sunline.adp.dao.datasource.transaction.impl.DefaultTransactionManager$1:93][DB-2[Commit][FRWDB], DB cumulative time [0]]
+[INFO ][13:20:40,079][http-nio-8887-exec-2][ ][ ][ ][/getUserInfo][cn.sunline.adp.cedar.base.logging.TraceLogUtil:74][]
+[INFO ][13:20:40,079][http-nio-8887-exec-2][ ][ ][ ][/getUserInfo][cn.sunline.adp.cedar.engine.online.handler.last.OETDumpDebugInfoHandler:37][
+Public run variable assignment
+	Field mapping
+<transaction start>
+<transaction input interface data mapping>
+	Field mapping
+		name->name=hanxin2
+<transaction attribute interface data mapping>
+	Field mapping
+<transaction output interface data mapping>
+	Field mapping
+		name->name=null
+		portone->portone=null
+		porttwo->porttwo=null
+Execution service id[getUserInfo] name[hello.getUserInfo]
+	Field mapping
+		name->name=hanxin2
+	[R] execution service: name[hello.getUserInfo]
+	Field mapping
+		name->name=hanxin2
+		porttwo->porttwo=8888
+Execution method node id[getMyselfPort] method[getMyselfPort]
+	Execute method node [getUserInfo] in transaction [getMyselfPort]
+<transaction output variable mapping>
+	Field mapping
+		name->name=hanxin2
+		portone->portone=8887
+		porttwo->porttwo=8888
+<End of transaction>
+<Common response variable output to data area>
+	Field mapping
+]
+[INFO ][13:20:40,080][http-nio-8887-exec-2][ ][ ][ ][/getUserInfo][cn.sunline.adp.cedar.engine.online.handler.last.OETLogResponseHandler:31][RES[{sys={erortx=\u4EA4\u6613\u6210\u529F, pckgsq=00000000, erorcd=AAAAAAAAAA, status=S, maxsubtransno=}, comm_res={}, output={name=hanxin2, portone=8887, porttwo=8888}, printer={}}]]
+[INFO ][13:20:40,080][http-nio-8887-exec-2][ ][ ][ ][/getUserInfo][cn.sunline.adp.cedar.engine.online.handler.last.OETLogResponseHandler:45][
+-------------------------transaction service[getUserInfo][null][1642656040][1642656040][] End-------------------------]

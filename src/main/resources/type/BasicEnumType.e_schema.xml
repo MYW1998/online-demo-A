@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="BasicEnumType" package="cn.sunline.edsp.busi.type" longname="Basic restriction type" classgen="normal" xsi:noNamespaceSchemaLocation="ltts-model.xsd">
+    <restrictionType id="E_ACCTST" longname="Account Status" base="string" maxLength="1" byCharacter="false">
+        <enumeration id="normal" value="0" longname="normal"/>
+        <enumeration id="closta" value="1" longname="logout"/>
+    </restrictionType>
+</schema>

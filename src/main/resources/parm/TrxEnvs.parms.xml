@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="TrxEnvs" package="cn.sunline.edsp.busi.parm" longname="Public operation area" classgen="normal" xsi:noNamespaceSchemaLocation="ltts-model.xsd">
+    <complexType id="Request" longname="Public request field" abstract="false" introduct="false">
+        <element id="bossno" longname="corporate code" type="BasicType.U_BOSSNO" ref="AtDict.Comm.bossno" required="false" multi="false" range="false" array="false" final="false" override="false" allowSubType="true"/>
+    </complexType>
+    <complexType id="Response" longname="Public response field" abstract="false" introduct="false">
+        <element id="tranno" longname="Trading serial number" type="BasicType.U_TRANNO" ref="AtDict.Comm.tranno" required="false" multi="false" range="false" array="false" final="false" override="false" allowSubType="true"/>
+    </complexType>
+    <complexType id="RunEnvs" longname="Public run field (contains public request fields and public response fields)" abstract="false" introduct="false">
+        <element id="bossno" longname="corporate code" type="BasicType.U_BOSSNO" ref="AtDict.Comm.bossno" required="false" multi="false" range="false" array="false" final="false" override="false" allowSubType="true"/>
+        <element id="tranno" longname="Trading serial number" type="BasicType.U_TRANNO" ref="AtDict.Comm.tranno" required="false" multi="false" range="false" array="false" final="false" override="false" allowSubType="true"/>
+        <element id="acctno" longname="Account number" type="BasicType.U_ACCTNO" ref="AtDict.Acct.acctno" required="false" multi="false" range="false" array="false" final="false" override="false" allowSubType="true"/>
+    </complexType>
+</schema>

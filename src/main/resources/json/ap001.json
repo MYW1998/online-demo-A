@@ -1,0 +1,11 @@
+{
+	"sys":{
+		"servicecode":"ap001"
+	},
+	"input":{
+		"custna":"zhansan",
+		"teleno":"189730792435",
+		"tranam":1000,
+		"custno":"910009417"
+	}
+}

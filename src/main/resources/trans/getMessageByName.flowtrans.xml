@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<flowtran xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="getMessageByName" longname="根据Name获取用户信息" kind="query" package="cn.sunline.edsp.busi.trans" xsi:noNamespaceSchemaLocation="ltts-model.xsd">
+    <interface package="cn.sunline.edsp.busi.online.demo.trans.intf">
+        <input packMode="true">
+            <field id="name" type="string" required="false" multi="false" array="false" longname="用户姓名" ref="userInfoDict.userInfoInput.name"/>
+            <field id="unitId" type="string" required="false" multi="false" array="false" longname="单元id" ref="userInfoDict.userInfoInput.unitId"/>
+        </input>
+        <output asParm="true" packMode="true">
+            <field id="name" type="string" required="false" multi="false" array="false" longname="用户姓名" ref="userInfoDict.userInfoOutput.name"/>
+            <field id="routeProcess" type="object" required="false" multi="false" array="false" longname="路由跟踪" desc="数据路由的过程" ref="userInfoDict.userInfoOutput.routeProcess"/>
+        </output>
+        <property packMode="true"/>
+        <printer packMode="true"/>
+    </interface>
+    <flow>
+        <service serviceName="hello.getMeassageByName" id="getMeassageByName" longname="根据Name获取用户信息">
+            <in_mappings by_interface="true"/>
+            <out_mappings by_interface="true"/>
+        </service>
+        <method method="getPortOfCurrentRoutingNode" id="getPortOfCurrentRoutingNode" longname="获取当前路由节点的端口"/>
+    </flow>
+    <outMapping/>
+    <propertyToPrinterMapping/>
+    <outToPrinterMapping/>
+</flowtran>

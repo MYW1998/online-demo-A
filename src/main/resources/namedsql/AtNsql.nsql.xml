@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<sqls xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="AtNsql" longname="Account module named sql" package="cn.sunline.edsp.busi.namedsql" xsi:noNamespaceSchemaLocation="ltts-model.xsd">
+    <select cache="none" method="selectOne" type="sql" id="queryInfoByCustno" longname="Query customer related information by account number">
+        <sql type="mysql"><![CDATA[SELECT
+ cust.custna,
+ cust.teleno,
+ acct.acctam,
+ acct.acctst
+FROM
+ kapp_cust AS cust
+LEFT JOIN kapp_acct AS acct ON acct.custno = cust.custno
+WHERE
+ acct.acctno = #acctno#]]></sql>
+        <parameterMap class="java.util.Map">
+            <parameter property="acctno" ref="AtDict.Acct.acctno" jdbcType="VARCHAR" javaType="BasicType.U_ACCTNO" mode="in" longname="Account number" parameterType="condition"/>
+        </parameterMap>
+        <resultMap class="AtComplex.custAcctComplex"/>
+    </select>
+</sqls>

@@ -1,0 +1,2 @@
+[INFO ][13:20:26,248][http-nio-8887-exec-1][ ][cn.sunline.adp.cedar.server.online.server.OnlineAccessServiceFacade:226][Service [/getUserInfo] processing time [1800]ms]
+[INFO ][13:20:40,080][http-nio-8887-exec-2][ ][cn.sunline.adp.cedar.server.online.server.OnlineAccessServiceFacade:226][Service [/getUserInfo] processing time [106]ms]

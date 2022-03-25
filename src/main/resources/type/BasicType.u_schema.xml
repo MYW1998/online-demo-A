@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="BasicType" package="cn.sunline.edsp.busi.type" longname="Basic restriction type" classgen="normal" xsi:noNamespaceSchemaLocation="ltts-model.xsd">
+    <restrictionType id="U_CUSTNA" longname="Customer name" base="string" maxLength="100"/>
+    <restrictionType id="U_CUSTNO" longname="Customer number" base="string" maxLength="100"/>
+    <restrictionType id="U_TELENO" longname="Telephone number" base="string" maxLength="100"/>
+    <restrictionType id="U_CARDNO" longname="Card number" base="string" maxLength="100"/>
+    <restrictionType id="U_ACCTNO" longname="Account number" base="string" maxLength="100"/>
+    <restrictionType id="U_ACCTAM" longname="Balance" base="double" maxLength="20" fractionDigits="2"/>
+    <restrictionType id="U_TRANNAM" longname="Transaction amount" base="double" maxLength="20" fractionDigits="2"/>
+    <restrictionType id="U_BOSSNO" longname="Corporate code" base="string" maxLength="30"/>
+    <restrictionType id="U_TRANNO" longname="Trading serial number" base="string" maxLength="30"/>
+</schema>

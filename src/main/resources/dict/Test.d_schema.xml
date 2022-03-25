@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="Test" package="cn.sunline.edsp.busi.dict" longname="测试字典" classgen="normal" xsi:noNamespaceSchemaLocation="ltts-model.xsd">
+    <complexType id="test" longname="测试字典" dict="true" abstract="false" introduct="false">
+        <element id="name" longname="哈哈哈" type="string" required="false" multi="false" range="false" array="false" final="false" override="false" allowSubType="true"/>
+        <element id="portone" longname="哈哈" type="string" required="false" multi="false" range="false" array="false" final="false" override="false" allowSubType="true"/>
+        <element id="porttwo" longname="哈" type="string" required="false" multi="false" range="false" array="false" final="false" override="false" allowSubType="true"/>
+    </complexType>
+</schema>

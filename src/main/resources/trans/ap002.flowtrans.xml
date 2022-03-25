@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<flowtran xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="ap002" longname="Dynamic use of sql demo" kind="query" package="cn.sunline.edsp.busi.trans" xsi:noNamespaceSchemaLocation="ltts-model.xsd">
+    <interface package="cn.sunline.edsp.busi.trans.intf">
+        <input packMode="true">
+            <field id="acctno" type="BasicType.U_ACCTNO" required="false" multi="false" array="false" longname="Account number" ref="AtDict.Acct.acctno"/>
+        </input>
+        <output asParm="true" packMode="true">
+            <field id="custna" type="BasicType.U_CUSTNA" required="false" multi="false" array="false" longname="Customer name" ref="AtDict.Cust.custna"/>
+            <field id="teleno" type="BasicType.U_TELENO" required="false" multi="false" array="false" longname="Telephone number" ref="AtDict.Cust.teleno"/>
+            <field id="acctam" type="BasicType.U_ACCTAM" required="false" multi="false" array="false" longname="Account Balance" ref="AtDict.Acct.acctam"/>
+            <field id="acctst" type="BasicEnumType.E_ACCTST" required="false" multi="false" array="false" longname="Account Status" ref="AtDict.Acct.acctst"/>
+        </output>
+        <property packMode="true"/>
+        <printer packMode="true"/>
+    </interface>
+    <flow>
+        <method method="queryInfoByCustno" id="queryInfoByCustno" longname="Check account information and customer information by customer number"/>
+    </flow>
+    <outMapping/>
+    <propertyToPrinterMapping/>
+    <outToPrinterMapping/>
+</flowtran>
