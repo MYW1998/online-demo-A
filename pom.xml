@@ -15,11 +15,10 @@
         <access-rule>*;**/*</access-rule>
         <adp.maven.version>3.1.0-M11</adp.maven.version>
         <edsp.dependencies.bom>3.1.1-RELEASE</edsp.dependencies.bom>
-        <!--		  <adp.cedar.version>4.3.5-RELEASE</adp.cedar.version>-->
-        <!-- <adp.cedar.version>4.2.18-BETA-obase3</adp.cedar.version>-->
         <adp.cedar.version>4.3.14-BETA-25</adp.cedar.version><!--4.3.21-RELEASE-->
         <edsp-module>true</edsp-module>
         <curator.recipes.version>2.8.0</curator.recipes.version>
+        <edsp-traffic-mash.version>6.1.0-BETA5</edsp-traffic-mash.version>
     </properties>
     <dependencies>
         <dependency>
@@ -27,23 +26,25 @@
             <artifactId>apollo-client</artifactId>
             <version>1.9.0</version>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>cn.sunline.edsp</groupId>-->
-<!--            <artifactId>edsp-traffic-mesh-starter</artifactId>-->
-<!--            <version>5.0.35-RELEASE</version>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>cn.sunline.edsp</groupId>
+            <artifactId>edsp-traffic-mesh-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>cn.sunline.edsp</groupId>
+            <artifactId>edsp-traffic-mesh-government-datasource-apollo</artifactId>
+        </dependency>
 
-
-<!--        <dependency>-->
-<!--            <groupId>com.alibaba.cloud</groupId>-->
-<!--            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>-->
-<!--            <version>2.1.0.RELEASE</version>-->
-<!--        </dependency>-->
-<!--       	<dependency>-->
-<!--            <groupId>com.alibaba.cloud</groupId>-->
-<!--            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>-->
-<!--            <version>2.1.4.RELEASE</version>-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>com.alibaba.cloud</groupId>-->
+        <!--            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>-->
+        <!--            <version>2.1.0.RELEASE</version>-->
+        <!--        </dependency>-->
+        <!--       	<dependency>-->
+        <!--            <groupId>com.alibaba.cloud</groupId>-->
+        <!--            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>-->
+        <!--            <version>2.1.4.RELEASE</version>-->
+        <!--        </dependency>-->
 
 
         <dependency>
@@ -122,6 +123,17 @@
                 <groupId>org.apache.curator</groupId>
                 <artifactId>curator-framework</artifactId>
                 <version>${curator.recipes.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.sunline.edsp</groupId>
+                <artifactId>edsp-traffic-mesh-starter</artifactId>
+                <version>${edsp-traffic-mash.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cn.sunline.edsp</groupId>
+                <artifactId>edsp-traffic-mesh-government-datasource-apollo</artifactId>
+                <version>${edsp-traffic-mash.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
