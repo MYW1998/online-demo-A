@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<flowtran xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="tranResource2" longname="资源2【交易】" kind="query" package="cn.sunline.edsp.busi.trans.edsp_sentina" xsi:noNamespaceSchemaLocation="ltts-model.xsd">
+    <interface package="cn.sunline.edsp.busi.online.demo.trans.edsp_sentina.intf">
+        <input packMode="true">
+            <field id="goodsId" type="string" required="false" multi="false" array="false" longname="标识id"/>
+        </input>
+        <output asParm="true" packMode="true">
+            <field id="result" type="int" required="false" multi="false" array="false" longname="结果"/>
+        </output>
+        <property packMode="true"/>
+        <printer packMode="true"/>
+    </interface>
+    <flow>
+        <service serviceName="resource2.odevityInvoke" id="odevityInvoke" longname="外调接口，根据奇数偶数对应得到不同结果">
+            <in_mappings by_interface="true"/>
+            <out_mappings by_interface="true"/>
+        </service>
+    </flow>
+    <outMapping/>
+    <propertyToPrinterMapping/>
+    <outToPrinterMapping/>
+</flowtran>

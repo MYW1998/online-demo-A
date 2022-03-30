@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<serviceType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="resource1" kind="business" longname="流量治理组件---熔断限流功能测试---资源1" package="cn.sunline.edsp.busi.online.demo.servicetype.edsp_sentinal" xsi:noNamespaceSchemaLocation="ltts-model.xsd">
+<serviceType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="resource1" kind="business" longname="流量治理组件---熔断限流功能测试---资源1" package="cn.sunline.edsp.busi.servicetype.edsp_sentinal" xsi:noNamespaceSchemaLocation="ltts-model.xsd">
     <service id="selfInvokeGetOne" name="selfInvokeGetOne" longname="非外调接口，调用成功，返回1">
         <interface>
-            <input packMode="true"/>
+            <input packMode="false"/>
             <output asParm="false" packMode="false">
                 <field id="result" type="int" required="false" multi="false" array="false" longname="调用结果"/>
             </output>

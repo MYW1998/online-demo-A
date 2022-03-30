@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<serviceImpl xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="resource2Impl" longname="资源2的实现类" serviceType="resource2" package="cn.sunline.edsp.busi.online.demo.serviceimpl.edsp_sentina" xsi:noNamespaceSchemaLocation="ltts-model.xsd"/>

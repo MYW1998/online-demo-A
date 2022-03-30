@@ -6,11 +6,11 @@ package cn.sunline.edsp.busi.serviceimpl.edsp_sentinal;
  */
 @cn.sunline.adp.core.annotation.Generated
 @cn.sunline.adp.metadata.model.annotation.ConfigType(value = "resource1Impl", longname = "资源1的实现类", type = cn.sunline.adp.metadata.model.annotation.ConfigType.Type.SERVICE)
-public class resource1Impl implements cn.sunline.edsp.busi.online.demo.servicetype.edsp_sentinal.resource1 {
+public class resource1Impl implements cn.sunline.edsp.busi.servicetype.edsp_sentinal.resource1 {
     /**
      * 非外调接口，调用成功，返回1
      */
-    public Integer selfInvokeGetOne(final cn.sunline.edsp.busi.online.demo.servicetype.edsp_sentinal.resource1.selfInvokeGetOne.Input input) {
+    public Integer selfInvokeGetOne() {
         return Integer.valueOf(1);
     }
 }
