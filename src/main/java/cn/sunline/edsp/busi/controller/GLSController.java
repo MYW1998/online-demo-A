@@ -8,6 +8,7 @@ import cn.sunline.edsp.gcm.core.entity.UnitInfo;
 import cn.sunline.edsp.gcm.core.entity.UnitType;
 import cn.sunline.edsp.gls.api.entity.GLSAllocMapping;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -67,5 +68,12 @@ public class GLSController {
         return info;
     }
 
+    @Value("${flow:200}")
+    private String flow;
+
+    @RequestMapping("/flow")
+    public String test() {
+        return "获取apollo配置的规则： " + flow;
+    }
 
 }
