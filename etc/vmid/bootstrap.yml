@@ -1,0 +1,15 @@
+edsp:
+  traffic:
+  sentinel:
+  enabled: ${TRAFFIC_SENTINEL_ENABLED:true}                  # 是否开启，默认开启
+  project:
+  dashboard: ${TRAFFIC_SENTINEL_ENABLED:10.22.4.69:8080}
+  name: ${TRAFFIC_SENTINEL_NAME:adp}                              # 注册到sentinel上的名称，集群模式需名称一致，等同于-Dproject.name
+  port: ${TRAFFIC_SENTINEL_PORT:9740}                                         # sentinel客户端监控 API 的端口
+  connect-port: 18730                                    # 和集群通信端口
+  dataSource:                                                # 持久化配置
+  fileName: ${TRAFFIC_GOV_RULE:traffic_gov_rule}           # 持久化的规则文件名，实际的名称会加上后缀和类型（类型为空就不拼接类型）
+  fileType: ${TRAFFIC_GOV_TYPE:properties}                 # 文件名："${edsp.project.traffic.sentinel.dataSource.fileName}_${...project.name}.${...dataSource.fileType}"
+  groupKey:                                                # nacos为分组(Group)，apollo为配置项的key
+  flow: ${TRAFFIC_FLOW:flow}                                            # 流控规则配置groupKey
+  degrade: ${TRAFFIC_DEGRADE:degrade}                                   # 熔断降级规则配置groupKey

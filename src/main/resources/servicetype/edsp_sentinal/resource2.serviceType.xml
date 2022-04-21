@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<serviceType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="resource2" kind="business" longname="流量治理组件---熔断限流功能测试---资源2" package="cn.sunline.edsp.busi.servicetype.edsp_sentinal" xsi:noNamespaceSchemaLocation="ltts-model.xsd">
+<serviceType xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="resource2" kind="business" longname="资源2" package="cn.sunline.edsp.busi.servicetype.edsp_sentinal" xsi:noNamespaceSchemaLocation="ltts-model.xsd">
     <service id="odevityInvoke" name="odevityInvoke" longname="测试场景：休眠可控  用0或非零">
         <interface>
             <input packMode="true">

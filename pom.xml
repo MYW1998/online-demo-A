@@ -16,9 +16,18 @@
         <adp.maven.version>3.1.0-M11</adp.maven.version>
         <edsp.dependencies.bom>3.1.1-RELEASE</edsp.dependencies.bom>
         <adp.cedar.version>4.3.14-BETA-25</adp.cedar.version><!--4.3.21-RELEASE-->
-        <edsp-module>true</edsp-module>
         <curator.recipes.version>2.8.0</curator.recipes.version>
         <edsp-traffic-mash.version>6.1.0-BETA5</edsp-traffic-mash.version>
+        <httpclient.version>4.5.5</httpclient.version>
+
+<!-- tar.gz模式打包，和fastjar二选一-->
+        <edsp-module>true</edsp-module>
+        <assembly.file>assembly_v3.0.xml</assembly.file>
+        <!-- 设置为false 会将服务打成tar文件，默认是生成jar -->
+        <dist.skip>false</dist.skip>
+        <!--adp启停脚本 插件版本-->
+        <edsp-maven-genshell-version>2.x-beta7</edsp-maven-genshell-version><!--2.x-beta2    2.0.3-M3-->
+        <url.assembly>http://proxy.yfb.sunline.cn/repos/offline/assembly_v2.0.xml</url.assembly>
     </properties>
     <dependencies>
         <dependency>
@@ -34,7 +43,10 @@
             <groupId>cn.sunline.edsp</groupId>
             <artifactId>edsp-traffic-mesh-government-datasource-apollo</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+        </dependency>
         <!--        <dependency>-->
         <!--            <groupId>com.alibaba.cloud</groupId>-->
         <!--            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>-->
@@ -135,6 +147,13 @@
                 <artifactId>edsp-traffic-mesh-government-datasource-apollo</artifactId>
                 <version>${edsp-traffic-mash.version}</version>
             </dependency>
+
+            <!-- 远程调用 httpclient -->
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>${httpclient.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
     <build>
@@ -143,10 +162,9 @@
                 <groupId>cn.sunline.adp.maven</groupId>
                 <artifactId>adp-maven-plugin</artifactId>
                 <version>${adp.maven.version}</version>
-                <!-- <version>3.2.0-SNAPSHOT</version> -->
                 <configuration>
                     <generateArgs>
-                        <genRest>true</genRest>
+                        <genRest>false</genRest> <!-- 是否生成rest类 -->
                     </generateArgs>
                 </configuration>
                 <executions>
@@ -154,7 +172,6 @@
                         <phase>generate-sources</phase>
                         <goals>
                             <goal>build</goal>
-                            <!-- <goal>gentable</goal> -->
                         </goals>
                     </execution>
                 </executions>
@@ -198,17 +215,110 @@
                     </archive>
                 </configuration>
             </plugin>
+            <!--            <plugin>-->
+            <!--                <groupId>org.springframework.boot</groupId>-->
+            <!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
+            <!--                <configuration>-->
+            <!--                    <mainClass>cn.sunline.edsp.busi.server.Application</mainClass>-->
+            <!--                </configuration>-->
+            <!--                <version>2.1.9.RELEASE</version>-->
+            <!--                <executions>-->
+            <!--                    <execution>-->
+            <!--                        <goals>-->
+            <!--                            <goal>repackage</goal>-->
+            <!--                        </goals>-->
+            <!--                    </execution>-->
+            <!--                </executions>-->
+            <!--            </plugin>-->
+
             <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <mainClass>cn.sunline.edsp.busi.server.Application</mainClass>
-                </configuration>
-                <version>2.1.9.RELEASE</version>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <version>1.8</version>
                 <executions>
                     <execution>
+                        <id>add-source</id>
+                        <phase>generate-sources</phase>
                         <goals>
-                            <goal>repackage</goal>
+                            <goal>add-source</goal>
+                        </goals>
+                        <configuration>
+                            <sources>
+                                <source>${basedir}/target/gen</source>
+                            </sources>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>cn.sunline.edsp.maven</groupId>
+                <artifactId>edsp-maven-shell-plugin</artifactId>
+                <version>${edsp-maven-genshell-version}</version>
+                <configuration>
+                    <!-- 所有-D参数与JVM调优参数可通过jvmArg进行配置 -->
+                    <jvmArgs>
+                        <jvmArg>-Dltts.log.home=$HOME/logs/$VMID</jvmArg>
+                        <jvmArg>-Dltts.vmid:q=$VMID</jvmArg>
+                        <!--                        <jvmArg>-Dsetting.file=setting.properties</jvmArg>-->
+                        <jvmArg>-Dlog4j.configurationFile=log4j2.xml</jvmArg>
+                        <jvmArg>-server</jvmArg>
+                        <jvmArg>-Xms1024m</jvmArg>
+                        <jvmArg>-Xmx1024m</jvmArg>
+                        <jvmArg>-XX:PermSize=256m</jvmArg>
+                        <jvmArg>-XX:MaxPermSize=512m</jvmArg>
+                        <jvmArg>-XX:MaxMetaspaceSize=1024m</jvmArg>
+                        <jvmArg>-XX:+UseFastAccessorMethods</jvmArg>
+                        <jvmArg>-XX:+UseCompressedOops</jvmArg>
+                        <jvmArg>-XX:+DisableExplicitGC</jvmArg>
+                        <jvmArg>-XX:+ExplicitGCInvokesConcurrent</jvmArg>
+                        <jvmArg>-XX:ParallelGCThreads=10</jvmArg>
+                        <jvmArg>-XX:-UseAdaptiveSizePolicy</jvmArg>
+                        <jvmArg>-XX:SurvivorRatio=6</jvmArg>
+                        <jvmArg>-XX:+UseConcMarkSweepGC</jvmArg>
+                        <jvmArg>-XX:+CMSParallelRemarkEnabled</jvmArg>
+                        <jvmArg>-XX:+UseCMSCompactAtFullCollection</jvmArg>
+                        <jvmArg>-XX:+UseCMSInitiatingOccupancyOnly</jvmArg>
+                        <jvmArg>-XX:CMSInitiatingOccupancyFraction=70</jvmArg>
+                        <jvmArg>-XX:+UseCMSCompactAtFullCollection</jvmArg>
+                        <!-- <jvmArg>-XX:+UseParallelGC</jvmArg> <jvmArg>-XX:+UseParallelOldGC</jvmArg>
+                            <jvmArg>-XX:MaxTenuringThreshold=15</jvmArg> <jvmArg>-XX:MaxGCPauseMillis=200</jvmArg>
+                            <jvmArg>-XX:+PrintAdaptiveSizePolicy</jvmArg> -->
+                        <!-- GC参数 -->
+                        <jvmArg>-verbose:gc</jvmArg>
+                        <jvmArg>-XX:-TraceClassUnloading</jvmArg>
+                        <jvmArg>-XX:+PrintGCDetails</jvmArg>
+                        <jvmArg>-XX:+PrintGCApplicationStoppedTime</jvmArg>
+                        <jvmArg>-XX:+PrintGCApplicationConcurrentTime</jvmArg>
+                        <jvmArg>-XX:+PrintGCTimeStamps</jvmArg>
+                        <jvmArg>-XX:+PrintGCDateStamps</jvmArg>
+                        <jvmArg>-XX:+HeapDumpOnOutOfMemoryError</jvmArg>
+                        <jvmArg>-XX:HeapDumpPath=$HOME/logs/$VMID/sys/gc-$VMID.hprof</jvmArg>
+                        <jvmArg>-Xloggc:$HOME/logs/$VMID/sys/gc-$VMID.log</jvmArg>
+                        <jvmArg>-DenableEncStringEncryptDB=false</jvmArg>
+                        <jvmArg>-DenableEncStringUseEncrypt=false</jvmArg>
+                        <jvmArg>-DenableEncStringPrintTrueValue=true</jvmArg>
+                    </jvmArgs>
+                    <!-- 指定控制台日志输出目录 -->
+                    <logDir>$HOME/logs/$VMID/sys</logDir>
+                    <!-- skip是否跳过执行、可选项、默认值false -->
+                    <skip>false</skip>
+                    <!-- 启停脚本主命令名称(可选项,默认为ltts)-->
+                    <mainCmd>ceda</mainCmd>
+                    <!-- 启动类入口  (可选项,默认为Bootstrap入口)-->
+                    <starter>cn.sunline.edsp.busi.server.Application</starter>
+                    <!-- 默认使用 kill -TERM PID 超过指定时间未停止则使用kill -9 PID (可选参数,默认30s) -->
+                    <stopTimeout>30</stopTimeout>
+                    <!-- 配置启动成功的日志标识(可选项,默认为 SystemStatus:Started) -->
+                    <startOkFlag>SystemStatus:Started</startOkFlag>
+                    <!-- 配置启动失败的日志标识(可选项,默认为 SystemStatus:Started) -->
+                    <startErrFlag>SystemStatus:Error</startErrFlag>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>gen-shell-tpl</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>gen-shell</goal>
                         </goals>
                     </execution>
                 </executions>
