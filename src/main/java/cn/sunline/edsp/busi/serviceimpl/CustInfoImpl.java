@@ -1,6 +1,8 @@
 
 package cn.sunline.edsp.busi.serviceimpl;
 
+import cn.sunline.adp.cedar.base.logging.SysLog;
+import cn.sunline.adp.cedar.base.logging.SysLogUtil;
 import cn.sunline.adp.cedar.busi.sdk.biz.global.SysUtil;
 import cn.sunline.adp.core.annotation.Generated;
 import cn.sunline.adp.metadata.model.annotation.ConfigType;
@@ -14,6 +16,7 @@ import cn.sunline.edsp.busi.tables.AtTable.kapp_cust;
 @Generated
 @ConfigType(value = "CustInfoImpl", longname = "Customer type service implementation", type = ConfigType.Type.SERVICE)
 public class CustInfoImpl implements cn.sunline.edsp.busi.servicetype.CustInfo {
+	private static final SysLog log = SysLogUtil.getSysLog(CustInfoImpl.class);
 	/**
 	 * Create customer information
 	 */
@@ -21,7 +24,8 @@ public class CustInfoImpl implements cn.sunline.edsp.busi.servicetype.CustInfo {
 			final cn.sunline.edsp.busi.servicetype.CustInfo.createCust.Output output) {
 		try {
 			kapp_cust custInfo = SysUtil.getInstance(kapp_cust.class);
-			String custNo = "Customer Nunber:" + System.currentTimeMillis() / 1000;
+			int random = (int) (Math.random()*1000);
+			String custNo = "Customer Nunber:" + (System.currentTimeMillis() / 1000 + random);
 			custInfo.setCustno(custNo);
 			custInfo.setCustna(input.getCustna());
 			custInfo.setTeleno(input.getTeleno());
@@ -29,6 +33,7 @@ public class CustInfoImpl implements cn.sunline.edsp.busi.servicetype.CustInfo {
 
 			output.setCustno(custNo);
 		} catch (Exception e) {
+			log.error(e);
 			throw AtError.E001();
 		}
 	}

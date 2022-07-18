@@ -15,7 +15,7 @@
         <access-rule>*;**/*</access-rule>
         <adp.maven.version>3.1.0-M11</adp.maven.version>
         <edsp.dependencies.bom>3.1.1-RELEASE</edsp.dependencies.bom>
-        <adp.cedar.version>4.2.43-BETA-8</adp.cedar.version><!--4.3.14-BETA-25-->
+        <adp.cedar.version>4.1.7.4-RELEASE</adp.cedar.version><!--4.3.14-BETA-25-->
         <edsp-module>true</edsp-module>
         <curator.recipes.version>2.8.0</curator.recipes.version>
         <edsp-traffic-mash.version>6.1.0-BETA5</edsp-traffic-mash.version>
@@ -134,6 +134,16 @@
                 <groupId>cn.sunline.edsp</groupId>
                 <artifactId>edsp-traffic-mesh-government-datasource-apollo</artifactId>
                 <version>${edsp-traffic-mash.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>1.1.20</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>1.1.20</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
