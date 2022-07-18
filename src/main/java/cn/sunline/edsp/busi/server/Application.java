@@ -24,17 +24,17 @@ public class Application {
         //指定启动工程的配置文件。部署时可以用运行命令修改。Java -jar spring.profiles.active = XXX
         System.setProperty("spring.profiles.active", "local");
 //        System.setProperty("env", "DEV");
-        System.setProperty("apollo.configService", "http://10.22.4.79:8080");
+//        System.setProperty("apollo.configService", "http://10.22.4.79:8080");
         //start up
         CedarMain.main(args);
 //=======================================测试是否拿到bootstrap.yml配置====================================================================
-        Properties properties = null;
-        try {
-            properties = PropertiesLoaderUtils.loadAllProperties("bootstrap.yml");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        System.out.println("[bootstrap.yml]dashboard的配置是：" + properties.getProperty("dashboard"));
+//        Properties properties = null;
+//        try {
+//            properties = PropertiesLoaderUtils.loadAllProperties("bootstrap.yml");
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//        System.out.println("[bootstrap.yml]dashboard的配置是：" + properties.getProperty("dashboard"));
 
 //        String flag = SpringUtils.getEnv().getProperty("edsp.gcm.multiSystem.enabled");
 //        List<UnitInfo> unitInfoList = new ArrayList<UnitInfo>();
