@@ -1,5 +1,0 @@
-[INFO ][15:31:22,034][http-nio-8887-exec-1][ ][cn.sunline.adp.cedar.server.online.server.OnlineAccessServiceFacade:226][Service [/getUserInfo] processing time [22838]ms]
-[INFO ][15:59:48,952][http-nio-8887-exec-5][ ][cn.sunline.adp.cedar.server.online.server.OnlineAccessServiceFacade:226][Service [/getUserInfo] processing time [10558]ms]
-[INFO ][16:07:03,623][http-nio-8887-exec-2][ ][cn.sunline.adp.cedar.server.online.server.OnlineAccessServiceFacade:226][Service [/getUserInfo] processing time [83171]ms]
-[INFO ][16:10:33,009][http-nio-8887-exec-2][ ][cn.sunline.adp.cedar.server.online.server.OnlineAccessServiceFacade:226][Service [/getUserInfo] processing time [13543]ms]
-[INFO ][16:11:59,589][http-nio-8887-exec-1][ ][cn.sunline.adp.cedar.server.online.server.OnlineAccessServiceFacade:226][Service [/getUserInfo] processing time [9890]ms]
